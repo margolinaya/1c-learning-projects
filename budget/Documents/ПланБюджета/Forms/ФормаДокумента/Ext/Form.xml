@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="5">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="7"/>
+		</InputField>
+		<InputField name="Месяц" id="53">
+			<DataPath>Объект.Месяц</DataPath>
+			<Enabled>false</Enabled>
+			<ReadOnly>true</ReadOnly>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="МесяцКонтекстноеМеню" id="54"/>
+			<ExtendedTooltip name="МесяцРасширеннаяПодсказка" id="55"/>
+		</InputField>
+		<Button name="ПланыБюджетаЗаполнитьПоПрошлому" id="51">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ЗаполнитьПоПрошлому</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить план по предыдущему месяцу</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ПланыБюджетаЗаполнитьПоПрошломуРасширеннаяПодсказка" id="52"/>
+		</Button>
+		<Table name="ПланыБюджета" id="9">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ПланыБюджета</DataPath>
+			<ShowCommandBar>auto</ShowCommandBar>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПланыБюджетаКонтекстноеМеню" id="10"/>
+			<AutoCommandBar name="ПланыБюджетаКоманднаяПанель" id="11"/>
+			<ExtendedTooltip name="ПланыБюджетаРасширеннаяПодсказка" id="12"/>
+			<SearchStringAddition name="ПланыБюджетаСтрокаПоиска" id="13">
+				<AdditionSource>
+					<Item>ПланыБюджета</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланыБюджетаСтрокаПоискаКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ПланыБюджетаСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПланыБюджетаСостояниеПросмотра" id="16">
+				<AdditionSource>
+					<Item>ПланыБюджета</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланыБюджетаСостояниеПросмотраКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ПланыБюджетаСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПланыБюджетаУправлениеПоиском" id="19">
+				<AdditionSource>
+					<Item>ПланыБюджета</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланыБюджетаУправлениеПоискомКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="ПланыБюджетаУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПланыБюджетаНомерСтроки" id="30">
+					<DataPath>Объект.ПланыБюджета.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланыБюджетаНомерСтрокиКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ПланыБюджетаНомерСтрокиРасширеннаяПодсказка" id="32"/>
+				</LabelField>
+				<InputField name="ПланыБюджетаСтатья" id="34">
+					<DataPath>Объект.ПланыБюджета.Статья</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПланыБюджетаСтатьяКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ПланыБюджетаСтатьяРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="ПланыБюджетаСумма" id="38">
+					<DataPath>Объект.ПланыБюджета.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПланыБюджетаСуммаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ПланыБюджетаСуммаРасширеннаяПодсказка" id="40"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПланБюджета</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьПоПрошлому" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по прошлому</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по прошлому</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоПрошлому</Action>
+		</Command>
+	</Commands>
+</Form>
